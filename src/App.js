@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import Task4 from './components/task4';
-import './App.css';
+import './components/task4.css';
 
 function App() {
   const [displayTask, setDisplayTask] = useState(false);
-
-  function handleClick() {
-    setDisplayTask(!displayTask);
-    
-  }
-
+  
   return (
     <div className="App">
-      <input onClick={handleClick} type="button" value="Toggle" />
+      <input className="btn1" onClick={()=> setDisplayTask(!displayTask)} type="button" value="Toggle" />
       {displayTask && <Task4 />}
     </div>
   );

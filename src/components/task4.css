@@ -1,5 +1,3 @@
-/* Task4.css */
-
 body {
   background-color: #f8f8f8;
   font-family: Arial, sans-serif;
@@ -20,7 +18,6 @@ table {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  
 }
 
 th,
@@ -30,11 +27,17 @@ td {
 }
 
 th {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 20px;
   background-color: #333;
   color: white;
   font-weight: bold;
-  
+  animation: content 2000ms ease-in;
 }
 
 tr:nth-child(even) {
@@ -42,8 +45,19 @@ tr:nth-child(even) {
 }
 
 tr {
-  
   background-color: #e8e8e8;
+}
+
+.left {
+  animation: content1 2000ms ease-in;
+}
+
+.right {
+  animation: content2 2000ms ease-in;
+}
+
+.top {
+  animation: content3 2000ms ease-in;
 }
 
 tr:hover {
@@ -57,7 +71,38 @@ tr:hover {
   }
 }
 
+@keyframes content {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+@keyframes content1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+@keyframes content2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
-
+@keyframes content3 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

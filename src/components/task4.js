@@ -34,11 +34,11 @@ function Task4() {
         <tbody>
           {data.map((val) => (
             <tr key={val.id}>
-              <td>{val.firstName}</td>
-              <td>{val.lastName}</td>
-              <td>{val.email}</td>
-              <td>{val.phone}</td>
-              <td>{val.birthDate}</td>
+              <td className='left'>{val.firstName}</td>
+              <td className='left'>{val.lastName}</td>
+              <td className='top'>{val.email}</td>
+              <td className='right'>{val.phone}</td>
+              <td className='right'>{val.birthDate}</td>
             </tr>
           ))}
         </tbody>
